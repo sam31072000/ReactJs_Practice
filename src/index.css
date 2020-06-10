@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{margin-left: 10px;background-color: aqua;}
+/* .header{
+  color:blue;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: 'Metal Mania', cursive;
+} */
+/* we can use nternal css to see go to index.js */
