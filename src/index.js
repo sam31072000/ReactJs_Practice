@@ -18,7 +18,7 @@
 // serviceWorker.unregister();
 
 // var React = require('react')
-import React from 'react';  //to use JSX(which is html tags in js file)
+import React from 'react';  //to use JSX(which is html tags in js file and if not imported webpack module error will come
 import ReactDom from 'react-dom';  //To use render function
 import "./index.css" ;          //to include css file
 // import Other_name from './Heading';
