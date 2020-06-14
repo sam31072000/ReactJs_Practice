@@ -77,3 +77,34 @@ ReactDom.render(<React.Fragment>
 
   // We can use <> </> or make an array or we can use div tag to render multiple elements this in place of React.Fragment
   // <img />   self closing tags in ract
+
+/////////////////////////////////////////Props/MAp function//Arrow fat//////////////////////////////////////////////
+import Card,{Sdata} from './Card';
+// import Sdata from './Sdata';
+//curly braces use if we want to use javascript in jsx}
+console.log(Sdata);
+
+function ndata(val){
+  console.log(val);
+//val represents element in array respective to index number
+  return(
+    <Card
+      imgsrc={val.imgsrc}
+    title={val.title}
+    sname={val.sname}
+    watch_link={val.watch_link}
+    />
+  )
+}
+
+//we can create an array for passing an object and acess like array_name[index_number].property_name
+ReactDOM.render(<>
+  <Card 
+    imgsrc={Sdata[0].imgsrc}
+    title="__"
+    sname="Random 4"
+    watch_link="https://www.youtube.com/"
+  />
+  {/* we cannot add className in component based tags bcozita not html tag */}
+  {Sdata.map(ndata)}
+</>,document.getElementById("root"));
