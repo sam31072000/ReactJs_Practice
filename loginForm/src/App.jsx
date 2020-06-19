@@ -24,38 +24,44 @@ const App = ()=>{
         const value = event.target.value;
         const name = event.target.name;
         chng((preValue)=>{        //preValue tells the revious state
-            if(name==="fname"){
-                return({
-                    fname : value,
-                    lname : preValue.lname,
-                    email: preValue.email,
-                    pnumber : preValue.pnumber,
-                })
+           console.log(preValue);//contains previous whole data as a object
+            return ({
+                ...preValue,    //spead operator extends whole object here
+                [name] : value,  //here name treat as a string without brackets and updates the value of object
             }
-            else if(name==="email"){
-                return({
-                    fname : preValue.fname ,
-                    lname : preValue.lname,
-                    email : value,
-                    pnumber : preValue.pnumber,
-                })
-            }
-            else if(name==="pnumber"){
-                return({
-                    fname : preValue.fname ,
-                    lname : preValue.lname,
-                    email : preValue.email,
-                    pnumber : value,
-                })
-            }
-            else{
-                return({
-                    fname : preValue.fname,
-                    lname : value,
-                    email: preValue.email,
-                    pnumber : preValue.pnumber,
-                })
-            }
+            )
+            // if(name==="fname"){
+            //     return({
+            //         fname : value,
+            //         lname : preValue.lname,
+            //         email: preValue.email,
+            //         pnumber : preValue.pnumber,
+            //     })
+            // }
+            // else if(name==="email"){
+            //     return({
+            //         fname : preValue.fname ,
+            //         lname : preValue.lname,
+            //         email : value,
+            //         pnumber : preValue.pnumber,
+            //     })
+            // }
+            // else if(name==="pnumber"){
+            //     return({
+            //         fname : preValue.fname ,
+            //         lname : preValue.lname,
+            //         email : preValue.email,
+            //         pnumber : value,
+            //     })
+            // }
+            // else{
+            //     return({
+            //         fname : preValue.fname,
+            //         lname : value,
+            //         email: preValue.email,
+            //         pnumber : preValue.pnumber,
+            //     })
+            // }
 
         })
         console.log(event.target.value);
