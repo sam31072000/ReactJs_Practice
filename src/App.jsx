@@ -1,474 +1,131 @@
-// import React from 'react'
-// import Netflix_list from './Netflix_list';
+// // import React from 'react';
+// // import ReactDOM from 'react-dom';
+// // import './index.css';
+// // import App from './App';
+// // import * as serviceWorker from './serviceWorker';
 
-// const nm="Shaksham Agarwal";
+// // ReactDOM.render(
+// //   // <React.StrictMode>
+// //   //   <App />
+// //   // </React.StrictMode>,
+// //   <h1>Hello World</h1>,
+// //   document.getElementById('root')
+// // );
 
-// function App(){
-//     //we can use javascript code too in jsx file
-// return(
-//     <>
-//     <Netflix_list/>
-//     </>
-// );
+// // // If you want your app to work offline and load faster, you can change
+// // // unregister() to register() below. Note this comes with some pitfalls.
+// // // Learn more about service workers: https://bit.ly/CRA-PWA
+// // serviceWorker.unregister();
+
+// // var React = require('react')
+// import React from 'react';  //to use JSX(which is html tags in js file)
+// import ReactDom from 'react-dom';  //To use render function
+// import "./index.css" ;          //to include css file
+// // import Other_name from './Heading';
+// import * as quick from './Heading';
+// import App,{nm,add} from './App';
+
+// // var ReactDom = require('react-dom')
+// const fname = "Shaksham";
+// const lname = "Agarwal";
+// var mydate = new Date();
+// const rand_img = "https://source.unsplash.com/random/500x250";
+// const curr_date = new Date().toLocaleDateString(); //by same method we can get time also
+// const curr_hr = new Date().getHours();
+// let greeting="";
+// const greet_style = {};
+// if(curr_hr >=0 && curr_hr<12 ){
+//   greeting="Good Morning";
+//   greet_style.color="skyblue";
 // }
-// function add(a,b){
-//     let result = a+b;
-//     return result;
+// else if(curr_hr>=12 && curr_hr<19){
+//   greeting="Good Afternoon";
+//   greet_style.color="orange";
 // }
-
-// export default App;
-// export {nm,add};  //we can pass any number of variables in this
-// //only one export default needed
-// //we can export as much as needed beside of default using{} in which function name is passed
-
-////////SLOT MACHINNE GAME/////////////
-// import React from 'react';
-
-// const AppMchn = (props) => {
-//     // let x = '❤',y = '❤',z = '😉';
-
-//     if((props.x===props.y) && (props.x===props.z)){
-//         return (
-//             <>
-//                 <div className="slot_inner">
-//                     <h1>
-//                         {props.x}{props.y}{props.z}
-//                     </h1>
-//                     <h1>This is matching</h1>
-//                 </div>
-//             </>
-//         )
-//     }
-//     else{
-//         return (
-//             <>
-//                 <div className="slot_inner">
-//                     <h1>
-//                         {props.x}{props.y}{props.z}
-//                     </h1>
-//                     <h1>This is not matching</h1>
-//                 </div>
-//             </>
-//         )
-//     }
+// else{
+//   greeting="Good Night";
+//   greet_style.color="black";
 // }
+// const obj_css={
+//     color:"blue",
+//     textAlign: "center",
+//     textTransform: "capitalize",
+//     fontWeight: "bold",
+//     fontFamily: "'Metal Mania', cursive"
+//   };//we have to use camelcase letters in place of kebab case letter
 
-// const App = () =>{
+// // className="header" use for external css
 
-//     return (
-//         <>
-//             <h1 className="heading_style">🖥Welcome(*^_^*) <span styel={{fontWeight:"bold"}}>To Slot Machine Game</span>🖥</h1>
-//             <div className="Slottable">
-//             <AppMchn x="😀" y="😀" z="😀" />
-//             <AppMchn x="🍔" y="🍕" z="🍟" />
-//             <AppMchn x="😉" y="😉" z="😉" />
-//             <AppMchn x="🎆" y="✨" z="🎇" />
-//             </div>
-//         </>
-//     )
-// };
-///////////////////RectJs Hooks//////////
-// import React, { useState } from 'react';
-// let obj ={
-//     textAlign:'center' ,
-//     marginTop:'20px',
-//     marginBottom:'auto',
-//     marginLeft:'auto',
-//     marginRight:'auto',
+// ReactDom.render(<React.Fragment>
+// <h1 style={obj_css}>{`${fname} ${lname}`}</h1>
 
-// };
-// // const state = useState();
-// // console.log(state)//gives error becoz state always be put into function
-// // //we cannot inc value of count directly so we use state i.e hooks
-// // let count=1;
-// // const IncNum=()=>{
-// //     console.log("clicked")
-// //     console.log(count++)
-// // }
-// const App=() =>{
-//     // let count=1;
-//     const state = useState();
-//     const [count,setCount] = useState(0); //0 is the initial value and destructuring of array is used
-// // count is the current value and setCount is the updated value nd afterwards it become current value when we click button
-//     // console.log(count,setCount)
-// console.log(state) //it creates an array
-// //we cannot inc value of count directly so we use state i.e hooks
-
-// const IncNum=()=>{
-//     setCount(count+1);
-//     console.log("clicked")
-//     // console.log(count++)
-// }
-//     return(
-//         <>
-//             <h1 style={obj}>{count}</h1>
-//             <button className="btn" onClick={IncNum}>Click Me</button>
-//         </>
-//     );
-// };
-
-// import React, { useState } from 'react';
-
-// const obj ={
-//     // textAlign:"center",
-//     // display:"flex",
-//     // flexDirection:"column",
-//     // justifyContent:"center",
-//     // alignItems:"center",
-//     // position:"absolute",
-//     // marginRight:"auto",
-//     // marginLeft:"auto",
-//     // marginTop:"0",
-//     // marginBottom:"0",
-//     // width:"60%",
-//     // height:"200px",
-//     // margin:"0 auto",
-    // display: "block",
-    // position:" fixed",
-    // top: "0",
-    // bottom: "0",
-    // left: "0",
-    // right: "0",
-    // width: "200px",
-    // height: "100px",
-    // margin: "auto",
-// }
-// // const btn = {
-// //     padding:"12px 20px",
-// //     cursor:"pointer",
-// //     fontVariant:"small-caps",
-// //     textAlign:"center",
-// // }
-
-// const App=() =>{
-//     // let count=1;
-//     // const state = useState();
-//     let curr_time = new Date().toLocaleTimeString();
-//     const [time,setCount] = useState(curr_time);
-// // console.log(state) //it creates an array
-
-// const GetTime=()=>{
-//     let curr_time = new Date().toLocaleTimeString();
-//     setCount(curr_time);
-//     console.log("clicked")
-//     // console.log(count++)
-// }
-// setInterval(GetTime,1000);
-//     return(
-//         <>
-//         <div style={obj} >
-//             <h1>{time}</h1>
-//         </div>
-//         </>
-//     );
-// };
-// export default App;
-
-///////////Events///////
-// import React, { useState } from 'react';
-
-// const App = () =>{
-//     const[bg,setbg] = useState('red');    //setbg is a function nd always useed in functional component
-//     const[name,setname] = useState('Click me');
-//     const bgChng=()=>{
-//         setbg("blue");
-//         setname("You clicked.Double Click to change");
-//         console.log("Clicked");
-//     }
-//     const reChng=()=>{
-//         setbg('red');
-//         setname("Click Me")
-//         console.log("Clicked");
-//     }
-
-//     return(<>
-//         <div style={{backgroundColor:bg,}}>
-//             <button onClick={bgChng} onDoubleClick={reChng}>{name}</button>
-//         </div>
-//     </>);
-// };
-
-// export default App;
-
-///////////////////FORMS/////////////////
-
-// import React, { useState } from 'react';
-// import AddIcon from '@material-ui/icons/Add';
-// import { makeStyles } from '@material-ui/core/styles';
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
-// import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
-
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//       flexGrow: 1,
-//     },
-//     menuButton: {
-//       marginRight: theme.spacing(2),
-//     },
-//     title: {
-//       flexGrow: 1,
-//     },
-//   }));
-
-// const App = ()=>{
-//     const classes = useStyles();
-//     const [show,chng] = useState({
-//         fname:"",
-//         lname:"",
-//         email:"",
-//         pnumber:"",
-//     });
-//     const [num,chngnum] = useState(0);
-//     // const [show2,chng2] = useState();
-//     // const [fullName,chngName] = useState();
-//     // const [lastName,chngltName] = useState();
-
-//     const incdec = (event) => {
-//         const name = event.target.name;
-//         // console.log("Hello");
-//         chngnum((preValue)=>{     //prevValue ki  jgah kuch be naam delo nd chngnum state hai
-//             console.log(preValue);
-//             if(name==='inc')
-//             return preValue + 1;  //we can use num here also bcoz it is also a variable
-//             else{
-//                 if(preValue===0){
-//                 alert("sorry min limit exceed");
-//                 return 0;}
-//                 else
-//                 return num-1;
-//             }
-//         })
-//     }
-
-//     const onSub = (event)=>{
-//         event.preventDefault();
-//         alert("Form Submitted");
-//         // chngName(show);
-//         // chngltName(show2)
-//         // chng("");
-//         // chng2("");
-//     }
-//     const action=(event)=>{
-//         // event.preventDefault() to prevent default behaviour
-//         // chng(event.target.value);
-//         const value = event.target.value;
-//         const name = event.target.name;
-//         chng((preValue)=>{        //preValue tells the revious state
-//             console.log(preValue);//contains previous whole data as a object
-//             return ({
-//                 ...preValue,    //spead operator extends whole object here
-//                 [name] : value,  //here name treat as a string without brackets and updates the value of object
-//             }
-//             )
-//             // if(name==="fname"){
-//             //     return({
-//             //         fname : value,
-//             //         lname : preValue.lname,
-//             //         email: preValue.email,
-//             //         pnumber : preValue.pnumber,
-//             //     })
-//             // }
-//             // else if(name==="email"){
-//             //     return({
-//             //         fname : preValue.fname ,
-//             //         lname : preValue.lname,
-//             //         email : value,
-//             //         pnumber : preValue.pnumber,
-//             //     })
-//             // }
-//             // else if(name==="pnumber"){
-//             //     return({
-//             //         fname : preValue.fname ,
-//             //         lname : preValue.lname,
-//             //         email : preValue.email,
-//             //         pnumber : value,
-//             //     })
-//             // }
-//             // else{
-//             //     return({
-//             //         fname : preValue.fname,
-//             //         lname : value,
-//             //         email: preValue.email,
-//             //         pnumber : preValue.pnumber,
-//             //     })
-//             // }
-
-//         })
-//         console.log(event.target.value);
-//     }
-//     // const action2=(event)=>{
-//     //     // event.preventDefault() to prevent default behaviour
-//     //     chng2(event.target.value);
-//     //     console.log(event.target.value);
-//     // }
-//     return(
-//     <>
-    
-//     <div>
-
-//     <div className={classes.root}>
-//       <AppBar position="static">
-//         <Toolbar>
-//           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography variant="h6" className={classes.title}>
-//             News
-//           </Typography>
-//           <Button color="inherit">Login</Button>
-//         </Toolbar>
-//       </AppBar>
-//     </div>
-
-//     <form onSubmit={onSub}>       
-//      <h1>Hello {show.fname} {show.lname} </h1>
-//      <h4> {show.email} </h4>
-//      <h5> {show.pnumber} </h5>
-//         <input type="text" name="fname" style={{backgroundColor:"white"}} placeholder="Enter Your Name" onChange={action} value={show.fname} /*value="" use defaultValue*/></input>
-//         <br/> <br/>
-               
-//         <input type="text" name = "lname" style={{backgroundColor:"white"}} placeholder="Enter Your Last Name" onChange={action} value={show.lname} /*value={show2}*/ /*value="" use defaultValue*/></input>
-//         <br/> <br/>
-//         <input type="email" name="email" style={{backgroundColor:"white"}} placeholder="Enter Your Email" onChange={action} value={show.email} /*value="" use defaultValue*/></input>
-//         <br/><br/>
-        
-//         <input type="number" name="pnumber" style={{backgroundColor:"white"}} placeholder="Enter Your MObile NUmber" onChange={action} value={show.pnumber} /*value="" use defaultValue*/></input>
-        
-//         <br/>
-//         <Button variant="outlined" color="primary">
-//         Primary
-//       </Button>
-//         </form>
-
-//         <h1> {num} </h1>
-//         <button onClick={incdec} name="inc"> <AddIcon /> </button>
-//         <button onClick={incdec} name="dec">Dec</button>
-
-//     </div>
-//     </>);
-// };
-
-// export default App;
-
-////////////////////KEEP NOTES APP//////////////////////////
-
-// import React, { useState, useEffect } from 'react';
-// import Header from './Header';
-// import Footer from './Footer';
-// import CreateNote from './CreatNote';
-// import Note from './Note';
-// const App = () =>{
-  
-// const [note,updatenote] = useState([]);
-// // let n=0;
-// // useEffect(()=>{
-// //   // alert('Note Created');
-  
-// //   document.title = `Note added ${n}`;
-// // },[note]);
-
-//   const addit = (notes) =>{
-    
-//     updatenote((prevData) => {
-//       return [notes,...prevData];
-//     });
-//     // console.log(notes);
-//     alert("Note Created");
-//   }
-//   const dlnote = (uniq) => {
-//     // alert("Heyy stop");
-//     // delete note[key];  key is not a property
-//     const newarray=[];
-//     for(var i of note){
-//       console.log(i)
-//       newarray.push(i);
-//     }
-
-//     newarray.splice(uniq,1);
-//      console.log(newarray);
-//     updatenote(newarray);
-    
-//   }
-
-//   return(
-//     <>
-//         <Header/>
-//         <CreateNote onclick={addit}/>
-        
-//     <div style={{padding:"20px",}} className="container">
-//     <div className="row mx-4">
-//         {note.map((val,index)=>{
-//          return( <Note 
-//            key={index}
-//            uniq = {index}
-//           title= {val.title}
-//           content = {val.content}
-//           onclick = {dlnote}
-//         />);
-//         })}
-//         </div>
-//         </div>
+// {quick.default()}
+// <p>{quick.Myname()}</p>
+// <h2>Hello Sam,<span style={greet_style}>{greeting}</span></h2>
+// <p>Netflix Top 5 Webseries</p>
  
-  
-//         <Footer/>
-//     </>
-//   );
-// };
+// <App></App>
+// <p>{nm} by additional export</p>
+// <p>The random number is {Math.random()}</p>
+// <p>The addition of two number is {add(4,4)}</p>
+// <p>{`The current date is ${mydate.getDate()}/${mydate.getMonth()+1}/${mydate.getFullYear()} and we get by another method also ${curr_date}`}</p>
+// <p>{`The current time is now ${mydate.getHours()}:${mydate.getMinutes()}:${mydate.getSeconds()}`}</p>
+// <h2 contentEditable='true' >Hey!! You can edit this</h2>
+// <img src={rand_img} alt="random image" />   
+// </React.Fragment>
+//   ,document.getElementById('root'));
 
-// export default App;
-
-
-
-///////////////API///////////////
-///////////////////React Route///////////////////
-import React from 'react';
-import { Route,Switch, Redirect} from 'react-router-dom';
-import ComA from './ComA';
-import ComB from './ComB';
-import Menu from './Menu';
-import User from './User';
-import SearchImage from './SearchImage';
-import Error404 from './Error404';
+//   // We can use <> </> or make an array or we can use div tag to render multiple elements this in place of React.Fragment
+//   // <img />   self closing tags in ract
 
 
-// '/' tells the home page //also say default page
-// exact is useful keyword
-//
-const App = () => {
-    const subpart = () => {
-        return <h1>"Hello I am subbpart"</h1>
-    }
 
-        const defaultpage = () => {
-            return (<>
-           
-            <h1>"Hello I am HomePage"</h1>
-            </>);
-        }
-return (
-   
-    <> 
-      <Menu/>
-    <Switch> {/* switch is used to return specififc element otherwise it return all */}
-        <Route exact path='/' component={defaultpage} />  {/* it return when the matching character match when we not use exact */}
-        <Route exact path='/ComA' component={()=> <ComA name='ComA'/>} />       {/*Another method of calling and called component method*/}
-        <Route path='/ComA/subpart' component={subpart} />
-        <Route path='/User/:fname/:lname' component={User} />
-        <Route path='/SearchImage' component={SearchImage} />
-        <Route path='/ComB' render={()=> <ComB name='ComB'/>} />      {/*This called ender method..it shows previous if no chnages occure in place of component method refreshes everytime*/}
-       <Route component={Error404}></Route>
-       <Redirect to='/' /> {/*direct Redirect to HomePage when page not exist*/ }
-       {/*render method preferable if we want to pass a props*/}
-        {/* <Route  component={}/> Return when none of the url match..or simple says error component return when none of the match  */}
-    </Switch>
-    {/* <ComA/>
-    <ComB/> */}
-    </>
-)
-}
-export default App;
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import Card,{Sdata} from './Card';
+// // import Sdata from './Sdata';
+// //curly braces use if we want to use javascript in jsx}
+// console.log(Sdata);
+
+// function ndata(val){
+//   console.log(val);
+// //val represents element in array respective to index number
+//   return(
+//     <Card
+//       imgsrc={val.imgsrc}
+//     title={val.title}
+//     sname={val.sname}
+//     watch_link={val.watch_link}
+//     />
+//   )
+// }
+
+// //we can create an array for passing an object and acess like array_name[index_number].property_name
+// ReactDOM.render(<>
+//   <Card 
+//     imgsrc={Sdata[0].imgsrc}
+//     title="__"
+//     sname="Random 4"
+//     watch_link="https://www.youtube.com/"
+//   />
+//   {/* we cannot add className in component based tags bcozita not html tag */}
+//   {Sdata.map(ndata)}
+// </>,document.getElementById("root"));
+
+///////////////////SLOT MACHINE GAME////////////////////////
+
+ import React from "react";
+ import ReactDOM from 'react-dom';
+ import { BrowserRouter } from 'react-router-dom';
+ import './index.css';
+ import App from './App';
+
+//user defined tags start with capital letter nd inbuild start with small letter
+
+ ReactDOM.render(   //render method j jb call hota hai jb jb page me kuch change hota hai
+   <>
+   <BrowserRouter>
+     <App />
+     </BrowserRouter>
+   </>,document.getElementById("root")
+ );
